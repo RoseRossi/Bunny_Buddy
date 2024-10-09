@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { AppBar, Toolbar, Button, Box } from '@mui/material';
 import LandingPage from './LandingPage'; 
 import logo from '/bunnycon.svg'
+import ChatPage from './ChatPage';
 
 export default function App() {
 
@@ -22,7 +23,7 @@ export default function App() {
 
   return (
     <div>
-      <AppBar position="sticky" color="default" elevation={0}>
+      <AppBar position="sticky" sx={{backgroundColor:"#3a5a60 "}} elevation={1}>
         <Toolbar>
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
             
@@ -55,6 +56,8 @@ export default function App() {
       </AppBar>
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/ChatPage" element={<ChatPage />} />
+        
       </Routes>
     </div>
   );

@@ -7,11 +7,10 @@
 .logo {
   height: 6em;
   padding: 1em;
+  margin-top: 2em;
   will-change: filter;
   transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #3a5a60 )
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
@@ -39,3 +38,8 @@
 .under-text {
   color: #888;
 }
+
+.card button {
+  margin-top: 1em; 
+}
+

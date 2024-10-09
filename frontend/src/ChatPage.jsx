@@ -1,14 +1,8 @@
+import { useState } from 'react'
 import bunnyLogo from '/bunnycon.svg'
 import './LandingPage.css'
-import { useNavigate } from 'react-router-dom'
 
-function LandingPage() {
-
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate('/ChatPage'); 
-  };
+function ChatPage() {
 
   return (
     <>
@@ -22,7 +16,7 @@ function LandingPage() {
         <p>
           Welcome to your personal emocional assistant. Click on the button down below to start your journal.
         </p>
-        <button onClick={handleClick}>
+        <button onClick={() => handleClick()}>
           Start
         </button>
       </div>
@@ -33,4 +27,4 @@ function LandingPage() {
   )
 }
 
-export default LandingPage
+export default ChatPage
