@@ -39,7 +39,7 @@
     padding: 10px;
     margin-top: 15px;
     font-size: 1em;
-    background-color: #00aaff;
+    background-color: #5f7f83;
     color: white;
     border: none;
     border-radius: 5px;
@@ -47,7 +47,7 @@
   }
   
   .card button:disabled {
-    background-color: #0077aa;
+    background-color: #718183;
   }
   
   .under-text {

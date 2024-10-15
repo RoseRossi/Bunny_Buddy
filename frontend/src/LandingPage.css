@@ -31,7 +31,7 @@
   }
 }
 
-.card {
+.cardLand {
   padding: 1em;
 }
 
@@ -39,7 +39,7 @@
   color: #888;
 }
 
-.card button {
+.cardLand button {
   margin-top: 1em; 
 }
 
