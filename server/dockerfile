@@ -1,0 +1,34 @@
+FROM python:3.12.6-alpine
+
+WORKDIR /app
+
+# Update container operating system
+RUN apk update 
+
+# Install c compiler for pyscopg2
+RUN apk add musl-dev gcc
+
+# Install python3-dev for psycopg2
+RUN apk add python3-dev
+
+# Install libpq-dev for psycopg2
+RUN apk add libpq-dev
+
+# Check if pg_config is in the path if not try to add it
+RUN if pg_config --version; then \
+  echo "pg_config is in the path"; \
+else \
+  echo "pg_config is not in the path, trying to add it" && \
+  export PATH=/usr/lib/postgresql/X.Y/bin/:$PATH; \
+  if pg_config --version; then \
+    echo "pg_config is now in the path"; \
+  else \
+    echo "pg_config was not added to the path"; \
+  fi \
+fi
+
+COPY requirements.txt requirements.txt
+
+RUN pip install -r requirements.txt
+
+COPY . .
