@@ -18,7 +18,7 @@ function LandingPage() {
         </a>
       </div>
       <h1>BunnyBuddy</h1>
-      <div className="card">
+      <div className="cardLand">
         <p>
           Welcome to your personal emocional assistant. Click on the button down below to start your journal.
         </p>
