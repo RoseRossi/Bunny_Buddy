@@ -4,6 +4,8 @@ import { AppBar, Toolbar, Button, Box } from '@mui/material';
 import LandingPage from './LandingPage'; 
 import logo from '/bunnycon.svg'
 import ChatPage from './ChatPage';
+import Login from './Login';
+import SignUp from './SignUp';
 
 export default function App() {
 
@@ -57,7 +59,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/ChatPage" element={<ChatPage />} />
-        
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/signup" element={<SignUp/>}/>
       </Routes>
     </div>
   );
